@@ -195,8 +195,12 @@ input {
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
-
+.signIn {
+  background-color: #3aa5cd;
+  border-color: white;
+}
 .overlay-left {
+  background: #3aa5cd;
   transform: translateX(-20%);
 }
 

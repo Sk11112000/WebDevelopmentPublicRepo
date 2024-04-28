@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import "./LoginAndSignUp.css";
 const LoginAndSignUp = () => {
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    console.log(formData);
+  };
   useEffect(() => {
     const signUpButton = document.getElementById("signUp");
     const signInButton = document.getElementById("signIn");
@@ -26,7 +31,7 @@ const LoginAndSignUp = () => {
     <div>
       <div class="container" id="container">
         <div class="form-container sign-up-container">
-          <form action="#">
+          <form onSubmit={handleSignUp}>
             <h1>Create Account</h1>
             <div class="social-container">
               <a href="#" class="social">
@@ -64,7 +69,9 @@ const LoginAndSignUp = () => {
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
             <a href="#">Forgot your password?</a>
-            <button>Sign In</button>
+            <button type="submit" class="signIn">
+              Sign In
+            </button>
           </form>
         </div>
         <div class="overlay-container">
@@ -81,7 +88,7 @@ const LoginAndSignUp = () => {
             <div class="overlay-panel overlay-right">
               <h1>Hello, Friend!</h1>
               <p>Enter your personal details and start journey with us</p>
-              <button class="ghost" id="signUp">
+              <button class="ghost" id="signUp" type="submit">
                 Sign Up
               </button>
             </div>
