@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import FontAwesome from "react-fontawesome";
 import "./LoginAndSignUp.css";
 const LoginAndSignUp = () => {
   const handleSignUp = (event) => {
@@ -35,7 +36,7 @@ const LoginAndSignUp = () => {
             <h1>Create Account</h1>
             <div class="social-container">
               <a href="#" class="social">
-                <i class="fab fa-facebook-f"></i>
+                <FontAwesome icon="fa-brands fa-facebook-f" />
               </a>
               <a href="#" class="social">
                 <i class="fab fa-google-plus-g"></i>
